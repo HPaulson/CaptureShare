@@ -1,0 +1,43 @@
+{
+    "meta": {
+        "title": "This is a title",
+        "description": "This is a description",
+        "name": "This is a name",
+        "url": "https://google.com",
+        "image": "https://www.google.com/images/logo.png",
+        "thumbnail": "https://www.google.com/images/logo.png",
+        "color": "000000"
+    },
+
+    "server": {
+        "host": "https://google.com",
+
+        "port": 80,
+
+        "notAllowed": ["exe", "jar"],
+
+        "mongoURL": "mongodb://localhost:27017/uploads",
+
+        "useOriginalName": false,
+
+        "nameLength": 3
+    },
+
+    "webhook": {
+        "url": "https://canary.discordapp.com/api/webhooks/123456789/ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "username": "Upload Server",
+        "avatar": "hhttps://www.google.com/images/logo.png",
+        "events": {
+            "fileUpload": "```md\n[Uploaded File]\n==============\n\n< SIZE   = {size}\n< TYPE   = {type}\n< FILE   = {file}\n\n< USER  = {user}```\n{link}",
+            "fileDelete": "```md\n[Removed File]\n==============\n\n< SIZE   = {size}\n< TYPE   = {type}\n< FILE   = {file}\n\n< USER  = {user}```\n{link}"
+        }
+    },
+
+    "users": [{
+        "username": "user",
+        "password": "1234567890"
+    }, {
+        "username": "user1",
+        "password": "0987654321"
+    }]
+}
