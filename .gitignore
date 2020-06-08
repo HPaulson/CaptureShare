@@ -5,3 +5,4 @@ app/database
 app/routes
 app/index
 app/config
+app/uploads
