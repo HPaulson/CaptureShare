@@ -1,0 +1,8 @@
+server/node_modules
+client/node_modules
+app/dist
+app/database
+app/routes
+app/index
+app/uploads
+app/config
