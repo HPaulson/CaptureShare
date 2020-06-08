@@ -4,5 +4,4 @@ app/dist
 app/database
 app/routes
 app/index
-app/uploads
 app/config
