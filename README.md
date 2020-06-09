@@ -1,6 +1,5 @@
 ![CaptureShare CI](https://github.com/HPaulson/CaptureShare/workflows/CaptureShare%20CI/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/hpaulson/captureshare/badge)](https://www.codefactor.io/repository/github/hpaulson/captureshare)
-[![time tracker](https://wakatime.com/badge/github/HPaulson/CaptureShare.svg)](https://wakatime.com/badge/github/HPaulson/CaptureShare)
 ---
 # CaptureShare: Your home for file sharing.
 
