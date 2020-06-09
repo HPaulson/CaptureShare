@@ -13,12 +13,12 @@ export default {
     loginComponet
   },
   metaInfo: {
-      "title": config.meta.title,
-      "description": config.meta.description,
-      "image": config.meta.image,
-      "thumbnail": config.meta.thumbnail,
-      "theme-color": config.meta.color,
-      "url": config.meta.url
-    }
+    title: config.meta.title,
+    description: config.meta.description,
+    image: config.meta.image,
+    thumbnail: config.meta.thumbnail,
+    "theme-color": config.meta.color,
+    url: config.meta.url
+  }
 };
 </script>
