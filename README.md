@@ -10,7 +10,7 @@
 
 * Support for POST upload requests from services such as ShareX and MagicCap
 
-* A beautiful dashboard built using Vue to provide a home for uploading, deleting, and managing files!
+* A beautiful dashboard built using Vue to provide a home for uploading, deleting, and managing files! (NOTE: The CaptureShare dashboard is currently a Work In Progress. Although it functions as expected, currently all features and styling has not yet been implemented)
 
 * Fast, efficient, and very easy to setup and use!
 ---
