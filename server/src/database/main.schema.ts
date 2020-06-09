@@ -1,5 +1,5 @@
 module.exports = {
-    Uploads: 
+    Uploads:
         require('mongoose').model('uploads',
 		require('mongoose').Schema({
 			_id: String,

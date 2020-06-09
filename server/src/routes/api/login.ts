@@ -28,7 +28,7 @@ router.post(
 			};
 		}
 	) => {
-		let foundUser: any = undefined;
+		let foundUser: any;
 
 		config.users.forEach((user: any) => {
 			if (user.username === req.body.username && user.password === req.body.password) {
