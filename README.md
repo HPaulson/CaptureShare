@@ -1,4 +1,5 @@
 [![time tracker](https://wakatime.com/badge/github/HPaulson/CaptureShare.svg)](https://wakatime.com/badge/github/HPaulson/CaptureShare)
+[![CodeFactor](https://www.codefactor.io/repository/github/hpaulson/captureshare/badge)](https://www.codefactor.io/repository/github/hpaulson/captureshare)
 
 ---
 
