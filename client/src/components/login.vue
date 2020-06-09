@@ -57,8 +57,9 @@ const loginButton = Document.getElementById("login-form-submit");
 
 loginButton.addEventListener("click", e => {
   e.preventDefault();
-  const username = loginForm.username.value;
-  const password = loginForm.password.value;
+  this.username = loginForm.username.value;
+  this.password = loginForm.password.value;
+  this.login()
 });
 </script>
 
@@ -83,8 +84,8 @@ export default {
           .then(data => {
             this.username = data.data;
             this.message = "Logged In Sucessfully (200)";
-            this.$store.commit('changeUser', data.data)
-            this.$router.push('/home');
+            this.$store.commit("changeUser", data.data)
+            this.$router.push("/home");
           })
           .catch(() => {
             this.message = "Incorrect Username or Password (403)";
