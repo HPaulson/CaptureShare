@@ -9,10 +9,32 @@ const fs = require('fs-extra');
 const path = require('path');
 const webcord = require('webcord');
 const multer = require('multer');
+let authUser = function(req, res) {
+	return new Promise(function(resolve, reject) {
+		let loggedin: {
+			username: string,
+			password: string;
+		};
+		config.users.forEach((users: { password: string; username: string }) => {
+			if (users.password === req.headers.authorization) {
+				loggedin = users;
+			}
+		});
+	
+		if (!loggedin) {
+			res.status(403).send({
+				status: 403,
+				message: 'UNAUTHORIZED',
+				data: []
+			}), reject(Error('403'))
+		}
+		else resolve(loggedin)
+	});
+  }
 
 const storage = multer.diskStorage({
 	destination: function(req: any, file: any, cb: (arg0: any, arg1: string) => void) {
-		cb(null, path.resolve(`${__dirname}../../uploads/`));
+		cb(null, path.resolve(`${__dirname}../../../uploads/`));
 	},
 
 	filename: function(
@@ -44,7 +66,7 @@ const storage = multer.diskStorage({
 					file.originalname = file.originalname.split('../')[len - 1];
 				}
 
-				if (fs.existsSync(path.resolve(`${__dirname}../../uploads/${file.originalname}`))) {
+				if (fs.existsSync(path.resolve(`${__dirname}../../../uploads/${file.originalname}`))) {
 					return cb(
 						{
 							status: 409,
@@ -65,7 +87,7 @@ const storage = multer.diskStorage({
 						result += letters.charAt(Math.floor(Math.random() * letters.length));
 					}
 
-					if (fs.existsSync(path.resolve(`${__dirname}../../uploads/${result}`))) {
+					if (fs.existsSync(path.resolve(`${__dirname}../../../uploads/${result}`))) {
 						return str(config.server.nameLength);
 					} else {
 						const len = file.originalname.split('.').length - 1;
@@ -113,24 +135,7 @@ router.get(
 			};
 		}
 	) => {
-		let loggedUser: {
-			username: string;
-			password: string;
-		};
-
-		config.users.forEach((users: { password: string; username: string }) => {
-			if (users.password === req.headers.authorization) {
-				loggedUser = users;
-			}
-		});
-
-		if (!loggedUser) {
-			return res.status(403).send({
-				status: 403,
-				message: 'UNAUTHORIZED',
-				data: []
-			});
-		} else {
+		await authUser(req, res).then(async (loggedUser: {username: string}) => {
 			return res.status(200).send({
 				status: 200,
 				message: 'OK',
@@ -138,8 +143,8 @@ router.get(
 					user: loggedUser.username
 				})
 			});
+		}).catch(() => {return})
 		}
-	}
 );
 
 router.post(
@@ -171,23 +176,7 @@ router.post(
 			};
 		}
 	) => {
-		let loggedUser: {
-			username: any;
-		};
-
-		config.users.forEach((users: { password: string; username: string }) => {
-			if (users.password === req.headers.authorization) {
-				loggedUser = users;
-			}
-		});
-
-		if (!loggedUser) {
-			return res.status(403).send({
-				status: 403,
-				message: 'UNAUTHORIZED',
-				data: []
-			});
-		} else {
+		authUser(req, res).then(async (loggedUser: {username: string}) => {
 			let fullData = [];
 
 			await req.files.forEach(async (f: { filename: any; mimetype: any; size: any }) => {
@@ -254,8 +243,8 @@ router.post(
 						});
 					});
 			});
+		}).catch(() => {return})
 		}
-	}
 );
 
 router.delete(
@@ -284,24 +273,8 @@ router.delete(
 			};
 		}
 	) => {
-		let loggedUser: {
-			username: string;
-			password: string;
-		};
+		authUser(req, res).then(async (loggedUser: {username: string}) => {
 
-		config.users.forEach((users: { password: string; username: string }) => {
-			if (users.password === req.headers.authorization) {
-				loggedUser = users;
-			}
-		});
-
-		if (!loggedUser) {
-			return res.status(403).send({
-				status: 403,
-				message: 'UNAUTHORIZED',
-				data: []
-			});
-		} else {
 			if (!req.params.id) {
 				return res.status(400).send({
 					status: 400,
@@ -342,7 +315,7 @@ router.delete(
 						});
 				});
 
-				fs.emptyDirSync(path.resolve(`${__dirname}../../uploads/`));
+				fs.emptyDirSync(path.resolve(`${__dirname}../../../uploads/`));
 
 				return res.status(200).send({
 					status: 200,
@@ -375,7 +348,7 @@ router.delete(
 							)
 						);
 						fs
-							.unlink(path.resolve(`${__dirname}../../uploads/${req.params.id}`))
+							.unlink(path.resolve(`${__dirname}../../../uploads/${req.params.id}`))
 							.then(() => {
 								return res.status(200).send({
 									status: 200,
@@ -399,7 +372,7 @@ router.delete(
 						});
 					});
 			}
-		}
+		}).catch(() => {return})
 	}
 );
 

@@ -28,4 +28,4 @@ If applicable, add screenshots to help explain your problem.
  - Browser [e.g. chrome, safari]
 
 **Additional context**
-Add any other context about the problem here.
+Add any other context about the problem here. This includes any errors in the browser or node console, as these are VERY importiant to help find issues!
