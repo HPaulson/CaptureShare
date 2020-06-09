@@ -7,7 +7,7 @@
         <div id="login-error-msg-holder">
           <p
             id="login-error-msg"
-            v-if="message.includes(403)"
+            v-if="!message.includes(200)"
             style="color: red"
           >
             {{ message }}
@@ -87,8 +87,9 @@ export default {
             this.$store.commit("changeUser", data.data);
             this.$router.push("/home");
           })
-          .catch(() => {
-            this.message = "Incorrect Username or Password (403)";
+          .catch((err) => {
+            if (err.toString().includes('403')) this.message = "Incorrect Username or Password (403)"
+            else {this.message = err.toString(), console.log('msg: ', this.message)}
           });
       }
     }
