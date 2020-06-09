@@ -11,15 +11,10 @@
 
     "server": {
         "host": "https://google.com",
-
         "port": 80,
-
         "notAllowed": ["exe", "jar"],
-
         "mongoURL": "mongodb://localhost:27017/uploads",
-
         "useOriginalName": false,
-
         "nameLength": 3
     },
 

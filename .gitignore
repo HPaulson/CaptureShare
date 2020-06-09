@@ -3,6 +3,7 @@ client/node_modules
 app/dist
 app/database
 app/routes
-app/index
-app/config
+app/index.js
+app/config.json
 app/uploads
+app/node_modules

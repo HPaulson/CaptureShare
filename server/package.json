@@ -10,6 +10,6 @@
     "webcord": "^2.1.4"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "yarn install && tsc"
   }
 }
