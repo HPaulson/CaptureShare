@@ -27,9 +27,9 @@
 
 * CapsureShare comes pre-built for easy install. For more information on building files to contribute, read the [Contributing]() section
 
-* Install the latest [release](https://github.com/HPaulson/CaptureShare/releases) of CaptureShare
+* Install the latest [release](https://github.com/HPaulson/CaptureShare/releases) of CaptureShare, named `CaptureShare-VERSION`
 
-* Extract the `CapsureShare.zip` file
+* Extract the `CaptureShare-VERSION.zip` file
 ---
 ### Configuring CaptureShare
 
