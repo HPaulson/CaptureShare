@@ -254,17 +254,4 @@
 | data       |  Array containing database objects for all uploaded files     | `[{staus: 200, message: "OK", data: {_id: "file.png", uploadedAt: "2020-06-09T01:33:52.814Z", user: "user", fileType: "image/png", fileSize: "186.968KB"}}]` |
 ---
 ## Contributing
-### Issues
-* Please follow the Issue Template when submitting issues! This will give maintainers sufficient information to help solve your issue!
-* Please respond to issues in a timely manner, and do not open spam issues
-* Please comment on other's issues if you are experiencing the same issue, or support their feature request!
-### Pull Requests
-#### PreReq's:
-* [NodeJs](https://nodejs.org)
-* [TypeScript](https://www.typescriptlang.org/)
-* [Yarn](https://yarnpkg.com/)
-
-#### Setup:
-* Fork and clone CaptureShare on the MASTER branch
-* Run `yarn build` in `client`, `server`, and `app` to build Vue, Express, and package files
-* Submit a [Pull Request](https://github.com/HPaulson/CaptureShare/compare)!
+#### Want to contribute? Please head over to our [Contributing Guidelines](https://github.com/HPaulson/CaptureShare/blob/master/.github/CONTRIBUTING.md) to learn more!
