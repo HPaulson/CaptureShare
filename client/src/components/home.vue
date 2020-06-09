@@ -78,7 +78,6 @@
     </div>
   </div>
       <i class="fas fa-upload" style="vertical-align: middle;"></i> 
-      </div>
       <h1>Recent Files</h1>
   <div class="uploads-container">
     <p class = "card"

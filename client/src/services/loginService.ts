@@ -9,7 +9,6 @@ class LoginService {
 
     return axios
       .post(BASE_URL + "login/", {
-
         username: username,
         password: password
       })

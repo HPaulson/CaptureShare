@@ -59,7 +59,7 @@ loginButton.addEventListener("click", e => {
   e.preventDefault();
   this.username = loginForm.username.value;
   this.password = loginForm.password.value;
-  this.login()
+  this.login();
 });
 </script>
 
@@ -72,7 +72,7 @@ export default {
     return {
       message: "",
       username: "",
-      password: "",
+      password: ""
     };
   },
   methods: {
@@ -84,7 +84,7 @@ export default {
           .then(data => {
             this.username = data.data;
             this.message = "Logged In Sucessfully (200)";
-            this.$store.commit("changeUser", data.data)
+            this.$store.commit("changeUser", data.data);
             this.$router.push("/home");
           })
           .catch(() => {
