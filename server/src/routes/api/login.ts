@@ -4,7 +4,6 @@ const express = require('express');
 const router = express.Router();
 const config = require('../../config.json');
 
-// I'm so confused on how to format this... - Clayton (Krysk)
 router.post(
 	'/',
 	async (
