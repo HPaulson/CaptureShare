@@ -1,7 +1,10 @@
 ![CaptureShare CI](https://github.com/HPaulson/CaptureShare/workflows/CaptureShare%20CI/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/hpaulson/captureshare/badge)](https://www.codefactor.io/repository/github/hpaulson/captureshare)
 ---
-<div style="text-align:center"><img src="https://repository-images.githubusercontent.com/270843017/3dc7e180-c177-11ea-8238-624a2d79c255" /></div>
+<p align="center">
+  <img src="hhttps://repository-images.githubusercontent.com/270843017/3dc7e180-c177-11ea-8238-624a2d79c255" />
+</p>
+
 # CaptureShare: Your home for file sharing.
 
 ## Features
