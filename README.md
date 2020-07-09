@@ -2,7 +2,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/hpaulson/captureshare/badge)](https://www.codefactor.io/repository/github/hpaulson/captureshare)
 ---
 <p align="center">
-  <img src="hhttps://repository-images.githubusercontent.com/270843017/3dc7e180-c177-11ea-8238-624a2d79c255" />
+  <img src="https://repository-images.githubusercontent.com/270843017/3dc7e180-c177-11ea-8238-624a2d79c255" />
 </p>
 
 # CaptureShare: Your home for file sharing.
