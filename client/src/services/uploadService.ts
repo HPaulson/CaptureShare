@@ -1,7 +1,7 @@
 import axios from "axios";
 import config from "../../../app/config.json";
 
-const BASE_URL = `${config.server.host}/`;
+const baseURL = `${config.server.host}/`;
 
 class UploadService {
   static async upload(formData: any, user: any) {
@@ -17,7 +17,7 @@ class UploadService {
         client: true
       }
     };
-    return axios.post(BASE_URL + "api/upload", formData, conf).then(async x => {
+    return axios.post(baseURL + "api/upload", formData, conf).then(async x => {
       const uploadedFiles: any = [];
       await x.data.data.forEach((index: any) => {
         uploadedFiles.push({
@@ -41,7 +41,7 @@ class UploadService {
         client: true
       }
     };
-    await axios.delete(BASE_URL + "api/upload/" + id, conf);
+    await axios.delete(baseURL + "api/upload/" + id, conf);
   }
 
   static async getFiles(user: string) {
@@ -57,7 +57,7 @@ class UploadService {
         client: true
       }
     };
-    return axios.get(BASE_URL + "api/upload/", conf).then(async x => {
+    return axios.get(baseURL + "api/upload/", conf).then(async x => {
       return x.data.data;
     });
   }

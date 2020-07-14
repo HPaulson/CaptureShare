@@ -1,7 +1,5 @@
 <template>
-  <div v-if="this.$store.getters.user" class="home">
-    <homeComponet />
-  </div>
+  <homeComponet v-if="this.$store.getters.user" />
 </template>
 
 <script>
@@ -17,11 +15,17 @@ export default {
   },
   metaInfo: {
     title: config.meta.title,
-    description: config.meta.description,
-    image: config.meta.image,
-    thumbnail: config.meta.thumbnail,
-    "theme-color": config.meta.color,
-    url: config.meta.url
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "description", content: config.meta.description },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: config.meta.title },
+      { property: "theme-color", content: config.meta.color },
+      { property: "og:description", content: config.meta.description },
+      { property: "og:image", content: config.meta.image },
+      { property: "og:url", content: config.meta.url }
+    ]
   }
 };
 </script>

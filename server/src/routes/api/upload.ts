@@ -209,11 +209,11 @@ router.post(
 						};
 
 						new webcord({
-							url: config.webhook.url,
-							name: config.webhook.username,
-							avatar: config.webhook.avatar
+							url: config.discordWebhook.url,
+							name: config.discordWebhook.username,
+							avatar: config.discordWebhook.avatar
 						}).send(
-							config.webhook.events.fileUpload.replace(
+							config.discordWebhook.events.fileUpload.replace(
 								/{(.+?)}/g,
 								(_: any, x: string) => replacers[x.trim()] || ''
 							)
@@ -303,11 +303,11 @@ router.delete(
 							};
 
 							new webcord({
-								url: config.webhook.url,
-								name: config.webhook.username,
-								avatar: config.webhook.avatar
+								url: config.discordWebhook.url,
+								name: config.discordWebhook.username,
+								avatar: config.discordWebhook.avatar
 							}).send(
-								config.webhook.events.fileDelete.replace(
+								config.discordWebhook.events.fileDelete.replace(
 									/{(.+?)}/g,
 									(_: any, x: string) => replacers[x.trim()] || ''
 								)
@@ -338,11 +338,11 @@ router.delete(
 						};
 
 						new webcord({
-							url: config.webhook.url,
-							name: config.webhook.username,
-							avatar: config.webhook.avatar
+							url: config.discordWebhook.url,
+							name: config.discordWebhook.username,
+							avatar: config.discordWebhook.avatar
 						}).send(
-							config.webhook.events.fileDelete.replace(
+							config.discordWebhook.events.fileDelete.replace(
 								/{(.+?)}/g,
 								(_: any, x: string) => replacers[x.trim()] || ''
 							)
