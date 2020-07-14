@@ -9,8 +9,7 @@ import config from "../../../app/config.json";
 export default {
   name: "Login",
   components: {
-    loginComponet,
-    homeComponet
+    loginComponet
   },
   metaInfo: {
     title: config.meta.title,
