@@ -4,7 +4,6 @@
 
 <script>
 import loginComponet from "@/components/login.vue";
-import homeComponet from "@/components/home.vue";
 import config from "../../../app/config.json";
 export default {
   name: "Login",
