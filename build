@@ -1,0 +1,12 @@
+start=$(date +%s.%N)
+cd app
+yarn build
+cd ../
+cd server
+yarn build
+cd ../
+cd client
+yarn build
+duration=$(echo "$(date +%s.%N) - $start" | bc)
+execution_time=`printf "%.2f seconds" $duration`
+echo "Finished building CaptureShare in $execution_time."

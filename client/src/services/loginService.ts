@@ -1,12 +1,12 @@
 import axios from "axios";
 import config from "../../../app/config.json";
 
-const BASE_URL = `${config.server.host}`;
+const baseURL = `${config.server.host}`;
 
 class LoginService {
   static async login(username: string, password: string) {
     return axios
-      .post(BASE_URL + "/api/login/", {
+      .post(baseURL + "/api/login/", {
         username: username,
         password: password
       })

@@ -18,4 +18,4 @@ app.use(express.static(`${__dirname}/uploads`));
 app.use(express.static(`${__dirname}/dist`));
 
 const PORT = config.server.port || 5000;
-app.listen(PORT, () => console.log(`Server Started On Port ${PORT}`));
+app.listen(PORT, () => console.log("Server Started On Port", PORT));

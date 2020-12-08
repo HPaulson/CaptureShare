@@ -12,5 +12,6 @@
 
 #### Setup:
 * Fork and clone CaptureShare on the MASTER branch
-* Run `yarn build` in `client`, `server`, and `app` to build Vue, Express, and package files
+* Make needed changes
+* Run `./build` to build Vue and Express files into `app` for testing
 * Submit a [Pull Request](https://github.com/HPaulson/CaptureShare/compare)!
